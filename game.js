@@ -19,7 +19,7 @@ function toggleRecording() {
   if (recording) {
     recordedNotes = [];
     console.log("🎙 Recording started...");
-    showFeedback("Recording started! Press keys to record notes.", "perfect");
+    
   } else {
     console.log("🛑 Recording stopped. Copy this into your song file:");
     console.log(JSON.stringify(recordedNotes, null, 2));
