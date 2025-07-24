@@ -22,7 +22,6 @@ function toggleRecording() {
     showFeedback("Recording started! Press keys to record notes.", "perfect");
   } else {
     console.log("🛑 Recording stopped. Copy this into your song file:");
-    showFeedback("Recording stopped! Check console for recorded notes.", "perfect");
     console.log(JSON.stringify(recordedNotes, null, 2));
   }
 }
