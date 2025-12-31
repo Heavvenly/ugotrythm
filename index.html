@@ -8,105 +8,168 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"></head>
-  <link rel="icon" href="sabrina.PNG">
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
+
+</head>
+  <link rel="icon" href="images/sabrina.PNG">
 <body>
+ 
 
+  <div id="intro-screen">
+    <div id="intro-content">
+      <h1 id="intro-title">Happy New Years</h1>
+      <p id="intro-text">Welcome to the u got rythm!</p>
+      <button id="intro-continue-button">Continue</button>
+    </div>
 
-
-  <div id="menu">
+  </div>
+  <div id="menu" class="hidden">
     <h1 id="title">u got rythm?</h1>
-    <p class="subtitle">Choose your track!</p>
+    <p class="subtitle"> </p>
     <div id="song-selector-container">
       <div id="rankshower">
-        <p id="rankAProgress">Songs with at least A Rank: 0/0</p>
-        <p id="rankSProgress">Songs with at least S Rank: 0/0</p>
-        <p id="rankSPlusProgress">Songs with S+ Rank: 0/0</p>
-        <p onclick="returnToMenu()">main menu - leon chang (click to start)</p>
-       
-        <p class="subtitle">You can also click K & L instead of D & F!</p>
+        <div class="level-widget" id="home-level"><h2>Level</h2><p class="level-display">1</p><div class="level-progress-bar-container"><div class="level-progress-bar"></div></div></div>
+        <p id="rankAProgress">Songs with at least A Rank: 0</p>
+        <p id="rankSProgress">Songs with at least S Rank: 0</p>
+        <p id="rankSPlusProgress">Songs with S+ Rank: 0</p>
+        <p onclick="toggleMenuMusic()">main menu - leon chang (click to start)</p>
+        <p>You can use K & L instead of D & F!</p>
+    
       </div>
      
-      
-      <div id="song-list-wrapper">
-        <div id="song-list">
-      
-          <div class="song-section" id="highlighted">
-            <button onclick="showSongInfo('song13')">🌊❤️ Sea of Love🟢</button>
-          </div>
-      
-          <div class="song-section" id="kpopdh">
-            <button onclick="showSongInfo('song10')">❤️‍🔥😈 Your Idol</button>
-            <button onclick="showSongInfo('song12')">🌟🗡️ How It's Done</button>
-            <button onclick="showSongInfo('song18')">🥤🫶 Soda Pop</button>
-            <button onclick="showSongInfo('song19')">🫧✨ Free</button>
-            <button onclick="showSongInfo('song20')">💛👑 Golden</button>
-            <button onclick="showSongInfo('song21')">👹⚔️ Takedown</button>
-          </div>
-      
-          <div class="song-section" id="classics">
-            <button onclick="showSongInfo('song9')">🦩🎸 Wish You Were Here</button>
-            <button onclick="showSongInfo('song11')">💃🪩 I Wanna Dance with Somebody</button>
-          </div>
-      
-          <div class="song-section" id="sabrina">
-            <button onclick="showSongInfo('song1')">☕️☀️ Espresso</button>
-            <button onclick="showSongInfo('song2')">😇🪽 Good Graces</button>
-            <button onclick="showSongInfo('song4')">🪽🕊️ Feather</button>
-            <button onclick="showSongInfo('song3')">⏰⏱️ 15 Minutes</button>
-          </div>
-      
-          <div class="song-section" id="cozy-synth">
-            <button onclick="showSongInfo('song5')">🏠☀️ Going Home</button>
-            <button onclick="showSongInfo('song6')">🧸🎹 Fundamentals</button>
-            <button onclick="showSongInfo('song7')">🪐⭐️ Planet Girl</button>
-            <button onclick="showSongInfo('song8')">🏙️💫 big boost city</button>
-          </div>
-      
-          <div class="song-section" id="siIvagunner">
-            <button onclick="showSongInfo('song14')">⚔️🎭 Meta Knight Defeated</button>
-            <button onclick="showSongInfo('song17')">💔♣️ Future Bossa (Heartbreaker Mix)</button>
-            <button onclick="showSongInfo('song15')">🥊🤺 How to Play (Sicko Mix)</button>
-            <button onclick="showSongInfo('song16')">🪨💥 Battlefield🔥</button>
-          </div>
-      
+      <div id="song-list-wrapper-wrapper"> 
+        <div id="song-list-wrapper">
+          <div id="song-list">
+        
+            <div class="song-section" id="highlighted">
+              <h2>Spotlight</h2>
+               <button onclick="showRANDOMSongInfo()">🎲❓ Random</button>
+               <button onclick="showSongInfo('song27')">🥜🎄 Easiest Song</button>
+               <button onclick="showSongInfo('song30')">🪟💻 Hardest Song</button>
+
+            
+            </div>
+            <div class="song-section" id="cozy-synth">
+              <h2>Electronic</h2>
+              
+              <button onclick="showSongInfo('song6')">🧸🎹 Fundamentals</button>
+              <button onclick="showSongInfo('song7')">🪐⭐️ Planet Girl</button>
+              <button onclick="showSongInfo('song8')">🏙️💫 big boost city</button>
+              <button onclick="showSongInfo('song30')">🪟💻 Windows 95</button>
+            </div>
+            <div class="song-section" id="siIvagunner">
+              <h2>SiIvaGunner / Video Game Remixes</h2>
+              <button onclick="showSongInfo('song14')">⚔️🎭 Meta Knight Defeated (Mask Off Ver.)</button>
+              <button onclick="showSongInfo('song17')">💔♣️ Future Bossa (Heartbreaker Mix)</button>
+              <button onclick="showSongInfo('song15')">🥊🤺 How to Play (Sicko Mix)</button>
+              <button onclick="showSongInfo('song23')">🌌🐼 Buoy Base Galaxy (Panda Ver.)</button>
+              <button onclick="showSongInfo('song16')">🪨💥 Battlefield (Faceoff Mix)</button>
+            </div>
+            <div class="song-section" id="kpopdh">
+              <h2>K-Pop Demon Hunters</h2>
+              <button onclick="showSongInfo('song10')">❤️‍🔥😈 Your Idol</button>
+              <button onclick="showSongInfo('song12')">🌟🗡️ How It's Done</button>
+              <button onclick="showSongInfo('song18')">🥤🫶 Soda Pop</button>
+              <button onclick="showSongInfo('song19')">🫧✨ Free</button>
+              <button onclick="showSongInfo('song20')">💛👑 Golden</button>
+              <button onclick="showSongInfo('song21')">👹⚔️ Takedown</button>
+            </div>
+
+            <div class="song-section" id="sabrina">
+              <h2>Sabrina Carpenter</h2>
+              <button onclick="showSongInfo('song1')">☕️☀️ Espresso</button>
+              <button onclick="showSongInfo('song24')">💧💦 Tears</button>
+              <button onclick="showSongInfo('song26')">🏠🚪 House Tour</button>
+              <button onclick="showSongInfo('song2')">😇🪽 Good Graces</button>
+              <button onclick="showSongInfo('song4')">🪽🕊️ Feather</button>
+              <button onclick="showSongInfo('song3')">⏰⏱️ 15 Minutes</button>
+            </div>
+            
+            <div class="song-section" id="classics">
+              <h2>Miscellaneous</h2>
+              <p>Instrumental</p>
+              <button onclick="showSongInfo('song5')">🏠☀️ Going Home</button>
+              <button onclick="showSongInfo('song22')">👁️🔮 Eye of the Untold Her</button>
+              <button onclick="showSongInfo('song25')">💞🎷 Meet You Again</button>
+              <p>中文</p>
+              <button onclick="showSongInfo('song35')">🌧️🌊 小雨</button>
+              <p>Classics</p>
+              <button onclick="showSongInfo('song11')">💃🪩 I Wanna Dance with Somebody</button>
+              <button onclick="showSongInfo('song9')">🦩🎸 Wish You Were Here</button>
+              <button onclick="showSongInfo('song13')">🌊❤️ Sea of Love</button>
+            </div>
+        
+          </div>  
+          <div id="holiday-song-list" class="hidden">
+
+            <div class="song-section" id="christmas-classics">
+              <h2>Holiday Classics</h2>
+              <p>Start here! (if you've never played rythmn games before)</p>
+              <button onclick="showSongInfo('song27')">🥜🎄 Christmas Time is Here</button>
+              <button onclick="showSongInfo('song28')">☃️❄️ Frosty the Snowman</button>
+              <button onclick="showSongInfo('song29')">❄️🚪 Baby It's Cold Outside</button>
+            </div>
+             <div class="song-section" id="holiday">
+              <p>Laufey</p>
+              <button onclick="showSongInfo('song31')">💃🌲 The Christmas Waltz</button>
+              <button onclick="showSongInfo('song32')">🏠🎅 Santa Claus is Comin' to Town</button>
+            </div>
+            <div class="song-section" id="schlatt">
+              <p>Schlatt</p>
+              <button onclick="showSongInfo('song33')">🌴🌅 Mele Kalikimaka</button>
+               <button onclick="showSongInfo('song34')">❄️🎄 It's the Most Wonderful Time of the Year </button>
+            </div>
+             <div class="song-section" id="greyperson">
+              <h2>Grey</h2>
+              <button onclick="showSongInfo('song36')">💓👤 Self Esteem</button>
+              <button onclick="showSongInfo('song37')">3️⃣⚰️ 3S</button>
+            </div>
+            <div class="song-section" id="sadieperson">
+              <h2>Sadie</h2>
+              <button onclick="showSongInfo('song38')">🌊🤍 Ocean Sounds</button>
+              <button onclick="showSongInfo('song39')">💤🍽️ Sleeping in the Kitchen</button>
+            </div>
+        
+          </div> 
+        </div>
+
+        <div id="button-wrapper">
+          <button onclick="switchSongLists()" id="toggle-songlist-button">Switch to Holiday Song List</button>
         </div>
       </div>
-  
-        <div id="song-info" class="hidden">
-          <audio id="info-audio" preload="auto"></audio>
-          <h1 id="songTitle-info"></h1>
-          <h3 id="artistName-info"></h3>
-          <hr>
-          <div id="difficulty-selector">
-            <button id="easy-button" class="diff-btn hidden">Easy</button>
-            <button id="normal-button" class="diff-btn hidden">Normal</button>
-            <button id="hard-button" class="diff-btn hidden">Hard</button>
-           
-           
-            <button id="extreme-button" class="diff-btn hidden">Extreme</button>
-          </div>
-       
-          <div style="display: flex" id="difficulty-info-info">
-            <div id="difficulty-info">
-              <div id="difficulty-bar"></div>
-            </div>
-            <h3>Difficulty</h3>
-          </div>
-          <h3 id="rank-info"></h3>
-          <h3 id="extreme-rank-info"></h3>
-          <br>
-          <button id="play-song-button">Choose a song!</button>
-          <p id="duration-info"></p>
-          <p id="extraNotes"></p>
-          <p class="subtitle" id="has-extreme-chart"></p>
-        </div>
-
-  
       
 
-
-      <img src="sabrina.PNG" alt="Sabrina">
+      <div id="song-info" class="hidden">
+        <audio id="info-audio" preload="auto"></audio>
+        <h1 id="songTitle-info"></h1>
+        <h3 id="artistName-info"></h3>
+        <audio id="preview-song-audio"></audio>
+        <hr>
+        <div id="difficulty-selector">
+          <button id="easy-button" class="diff-btn hidden">Easy</button>
+          <button id="normal-button" class="diff-btn hidden">Normal</button>
+          <button id="hard-button" class="diff-btn hidden">Hard</button>
+          <button id="extreme-button" class="diff-btn hidden">Extreme</button>
+        </div>
+      
+        <div style="display: flex" id="difficulty-info-info">
+          <div id="difficulty-info">
+            <div id="difficulty-bar"></div>
+          </div>
+          <h3>Difficulty</h3>
+        </div>
+        <h3 id="rank-info"></h3>
+        <h3 id="extreme-rank-info"></h3>
+        <br>
+        <button id="play-song-button">Choose a song!</button>
+        <p id="duration-info"></p>
+        <p id="extraNotes"></p>
+        <p class="subtitle" id="has-extreme-chart"></p>
+      </div>
+      <img id="sabrinaimage" src="images/sabrina.PNG" alt="Sabrina">
 
     </div>
 
@@ -118,17 +181,16 @@
     <h1 id="titleshrunk">u got rythm?</h1>
     <h3 id="song-title"></h3>
     <div id="columns">
-      <div class="column" id="col-a">A</div>
-      <div class="column" id="col-s">S</div>
-      <div class="column" id="col-d">D</div>
-      <div class="column" id="col-f">F</div>
+      <div class="column" id="col-a"><span>A</span></div>
+      <div class="column" id="col-s"><span>S</span></div>
+      <div class="column" id="col-d"><span>D</span></div>
+      <div class="column" id="col-f"><span>F</span></div>
       
       <div id="col-spacer"></div>
-
-      <div class="column" id="col-j">J</div>
-      <div class="column" id="col-k">K</div>
-      <div class="column" id="col-l">L</div>
-      
+    
+      <div class="column" id="col-j"><span>J</span></div>
+      <div class="column" id="col-k"><span>K</span></div>
+      <div class="column" id="col-l"><span>L</span></div>
     </div>
     <div id="feedback"></div>
     <div id="hud">
@@ -140,30 +202,63 @@
 
     </div>
     <audio id="audio" preload="auto"></audio>
+    <div class="bg-layer" id="bg-old"></div>
+    <div class="bg-layer" id="bg-new"></div>
   
   
     
   </div>
-  <div id="end-screen" class="hidden">
-    <h2>Song Complete!</h2>
-    <div id="final-rank"></div>
-    <div id="final-score"></div>
-    <div id="final-misses"></div>
-    <div id="next-rank-progress"></div>
-    <button onclick="returnToMenu()">Back to Menu</button>
+  <div id="end-screen" class="hidden" aria-hidden="true">
+  <div class="sky-bg" aria-hidden="true"></div>
+ 
+  <div class="end-card" role="dialog" aria-labelledby="end-title">
+    <div class="end-top">
+      <div class="song-meta">
+        <div id="end-song-title" class="end-song-title">Song Title</div>
+        <div id="end-song-artist" class="end-song-artist">Artist</div>
+      </div>
+      <div class="level-widget" id="end-level"><h2>Level</h2><p class="level-display">1</p><div class="level-progress-bar-container"><div class="level-progress-bar"></div></div></div>
+
+      <div id="end-rank-badge" class="rank-badge" aria-hidden="true">
+        <div class="ring"></div>
+        <div class="badge-inner">
+          <div id="badge-letter" class="badge-letter">S</div>
+          <div id="badge-sub" class="badge-sub">S Rank</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="end-stats">
+      <div id="final-score" class="stat-item">Score: 0</div>
+      <div id="final-misses" class="stat-item">Misses: 0</div>
+      <div id="next-rank-progress" class="stat-item small">—</div>
+    </div>
+
+    <div class="end-actions">
+      <button id="back-menu" class="btn">Back to Menu</button>
+      <button id="replay" class="btn">Replay Song</button>
+    </div>
   </div>
 
+  <div id="end-confetti" class="confetti" aria-hidden="true"></div>
+</div>
 
+ <div class="custom-cursor"></div>
+ <div class="realcustom-cursor"></div>
 
 
 <script>
-  for (let i = 1; i <= 30; i++) {
+  for (let i = 1; i <= 39; i++) {
     const script = document.createElement("script");
-    script.src = `songs/song${i}.js`;
-    script.onerror = () => {}; // ignore load error
+    script.src = `songcharts/song${i}.js`;
+    script.onerror = () => {console.log("dw this is supposed to happen");}; // ignore load error
     document.head.appendChild(script);
 }
 </script>
+<script src="levelling.js"></script>
+<script src="intro.js"></script>
 <script src="game.js"></script>
+
 </body>
-</html
+</html>
+
